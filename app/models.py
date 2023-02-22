@@ -70,9 +70,10 @@ class Categories(models.Model):
 class Portafolio(models.Model):
     name = models.CharField(max_length=255)
     client = models.CharField(max_length=255)
+    tech = models.CharField(max_length=255)
     category = models.CharField(max_length=255)
-    title = models.CharField(max_length=255)
-    description = models.CharField(max_length=255)
+    link = models.TextField()
+    description = models.TextField()
     date = models.DateField()
     img = models.ImageField(upload_to='project')
 

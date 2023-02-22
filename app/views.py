@@ -2,12 +2,11 @@ from django.shortcuts import render
 
 import smtplib
 from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 from django.conf import settings
 
 from datetime import datetime
 from app.models import Persona, Skills, SocialNetwork, TextDescript, Services, Sumary, Project, ProectTech, Experience, \
-    ExperienceDetails, EducationsDetails, Education, Awards, Portafolio, Categories
+    ExperienceDetails, EducationsDetails, Education, Awards, Portafolio, Categories, PortafolioIMG
 
 
 def index(request):
@@ -26,9 +25,6 @@ def index(request):
     awards = Awards.objects.all().values()
     categories = Categories.objects.all().values()
     portafolio = Portafolio.objects.all()
-
-    print(persona)
-    print(portafolio)
 
     context = {
         'persona': persona[0],
@@ -56,7 +52,15 @@ def index(request):
     return render(request,'index.html', context)
 
 def detailPortfolio(request, id):
-    return render(request, 'portfolio-details.html')
+    portafolio = Portafolio.objects.all().filter(id=id)
+    img = PortafolioIMG.objects.all().filter(portafolio_id=id)
+
+
+    context = {
+        'portafolio': portafolio[0],
+        'img': img,
+    }
+    return render(request, 'portfolio-details.html', context)
 
 
 def send_email(email, texto):
