@@ -3,11 +3,11 @@
 {% block content %}
 
     <!-- ======= Header ======= -->
-    <header id="header" class="d-flex align-items-center">
+    <header id="header" class="d-flex align-items-center px-3 px-md-0">
             <div class="container d-flex align-items-center justify-content-between">
 
           <div class="logo">
-            <h1><a href="index.html">Sheila</a></h1>
+            <h1><a href="{%  url 'index' %}">Sheila</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
           </div>
@@ -37,7 +37,7 @@
     <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about px-4 px-md-0 ">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -65,7 +65,7 @@
                 </ul>
               </div>
               <div class="col-lg-6">
-                <ul>
+                <ul class="p-0">
                     <li class="li-about"><strong>Degree:</strong> {{persona.degree}}</li>
                     <li class="li-about"><strong>Level:</strong> {{persona.level}}</li>
                     <li class="li-about">
@@ -95,7 +95,7 @@
     <!-- End About Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
+    <section id="skills" class="skills section-bg px-4 px-md-0">
       <div class="container">
 
         <div class="section-title">
@@ -104,7 +104,7 @@
 
         <div class="row skills-content justify-content-around">
 
-          <div style="column-count: 2; column-span: page">
+          <div id="skill" class="ms-5 ms-md-0">
             {% for it in skills %}
                <div class="progress me-5">
                   <span class="skill">{{ it.name }} <i class="val">{{ it.percent }}%</i></span>
@@ -121,7 +121,7 @@
     </section><!-- End Skills Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume section-bg">
+    <section id="resume" class="resume section-bg  px-2 px-md-0">
       <div class="container">
 
         <div class="section-title">
@@ -235,7 +235,7 @@
     </section><!-- End Resume Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <section id="services" class="services section-bg px-3 px-md-0">
       <div class="container">
 
         <div class="section-title">
@@ -259,7 +259,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
+    <section id="portfolio" class="portfolio section-bg px-3 px-md-0">
       <div class="container">
 
         <div class="section-title">
@@ -279,8 +279,8 @@
 
         <div class="row portfolio-container">
             {% for it in portafolio %}
-              <div class="col-lg-4 col-md-6 portfolio-item filter-{{ it.category }}" >
-             <div class="portfolio-wrap">
+              <div class="col-lg-4 ol-md-6 portfolio-item filter-{{ it.category }}" >
+             <div class="portfolio-wrap mb-3 ">
               <img src="{{it.img.url}}" class="img-fluid" alt="" style="min-height: 200px">
               <div class="portfolio-info">
                 <h4>{{it.name}}</h4>
@@ -298,7 +298,7 @@
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
+    <section id="contact" class="contact section-bg px-2 px-md-0">
       <div class="container">
 
         <div class="section-title">
@@ -359,12 +359,13 @@
               <div class="form-group mt-2">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required autocomplete="off"></textarea>
               </div>
-                <div class="text-center mt-3"><button type="submit">Send Message</button></div>
+                <div class="text-center mt-3">
+                    <button type="submit">Send Message</button>
+                </div>
              </form>
           </div>
 
         </div>
-
       </div>
     </section><!-- End Contact Section -->
 
