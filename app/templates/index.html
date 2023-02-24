@@ -305,7 +305,7 @@
           <h2>Contact</h2>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-between flex-wrap">
 
           <div class="col-lg-4 col-md-4">
             <div class="contact-about">
@@ -314,7 +314,7 @@
                 I am a dedicated person in all aspects of my life, committed to professional training,
                 seeking to acquire everything necessary to excel professionally.
                 </p>
-              <div class="social-links">
+              <div class="social-links" >
                 <a href="{{ twitter.link }}" class="twitter"><i class="bi bi-telegram"></i></a>
                 <a href="{{ facebook.link }}" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="{{ instagram.link }}" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -324,7 +324,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4">
+          <div class="col-lg-3 col-md-4 mt-3 mt-md-0">
             <div class="info">
               <div class="d-flex align-items-center">
                 <i class="bi bi-geo-alt"></i>
@@ -344,26 +344,41 @@
             </div>
           </div>
 
-          <div class="col-lg-5 col-md-8">
-             <form action="" method="POST" role="form" class="php-email-form">
-                {% csrf_token %}
-              <div class="form-group mt-2">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required autocomplete="off">
+          <div class="col-lg-3 col-md-4 d-none d-md-block">
+            <div class="contact-about">
+              <h4 style="font-weight: bold" class="text-secondary">Create your resume free</h4>
+              <ul class="p-0">
+                  <li style="list-style-type: none"><a href="http://app.flowcv.com">app.flowcv.com</a> </li>
+                  <li style="list-style-type: none"><a href="http://novoresume.com">novoresume.com</a> </li>
               </div>
-              <div class="form-group mt-2">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required autocomplete="off">
-              </div>
-              <div class="form-group mt-2">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required autocomplete="off">
-              </div>
-              <div class="form-group mt-2">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required autocomplete="off"></textarea>
-              </div>
-                <div class="text-center mt-3">
-                    <button type="submit">Send Message</button>
-                </div>
-             </form>
+            </div>
           </div>
+
+
+    </div>
+  </div>
+
+
+{#          <div class="col-lg-5 col-md-8">#}
+{#             <form action="" method="POST" role="form" class="php-email-form">#}
+{#                {% csrf_token %}#}
+{#              <div class="form-group mt-2">#}
+{#                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required autocomplete="off">#}
+{#              </div>#}
+{#              <div class="form-group mt-2">#}
+{#                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required autocomplete="off">#}
+{#              </div>#}
+{#              <div class="form-group mt-2">#}
+{#                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required autocomplete="off">#}
+{#              </div>#}
+{#              <div class="form-group mt-2">#}
+{#                <textarea class="form-control" name="message" rows="5" placeholder="Message" required autocomplete="off"></textarea>#}
+{#              </div>#}
+{#                <div class="text-center mt-3">#}
+{#                    <button type="submit">Send Message</button>#}
+{#                </div>#}
+{#             </form>#}
+{#          </div>#}
 
         </div>
       </div>
