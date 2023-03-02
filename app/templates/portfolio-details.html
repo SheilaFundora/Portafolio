@@ -27,7 +27,8 @@
 
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
+
+              <div class="swiper-wrapper align-items-center mt-4">
                 <div class="swiper-slide">
                     <img src="{{ portafolio.img.url}}" alt="" >
                 </div>
@@ -36,8 +37,16 @@
                         <img src="{{ it.img.url}}" alt="" >
                     </div>
                 {% endfor %}
+
               </div>
+
               <div class="swiper-pagination"></div>
+
+             {% if portafolio.link != '' %}
+                    <li><strong>Project URL</strong>: <br>
+                        <pre><a href="https://{{ portafolio.link }}" class="text-break">{{ portafolio.link }}</a></pre>
+                    </li>
+                {% endif %}
             </div>
           </div>
 
@@ -48,12 +57,9 @@
                 <li><strong>Category</strong>: {{ portafolio.category}} </li>
                 <li><strong>Client</strong>: {{ portafolio.client}}</li>
                 <li><strong>Project date</strong>: {{ portafolio.date}}</li>
-                {% if portafolio.link != '' %}
-                    <li><strong>Project URL</strong>: <a href="#" class="text-break">{{ portafolio.link }}</a></li>
-                {% endif %}
                 <li>
                     <strong style="text-decoration: underline">Used technology</strong>:
-                    <div class="mt-2 ms-0 ms-md-5">{{ portafolio.tech }}</div>
+                    <div class="mt-2 ">{{ portafolio.tech }}</div>
                 </li>
               </ul>
             </div>

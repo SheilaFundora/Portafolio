@@ -30,7 +30,7 @@
 
     <section id="hero" class="d-flex flex-column align-items-center justify-content-center mt-5">
     <h1>Hi, I'm Sheila!</h1>
-    <h2>I'm a {{ persona.speciality }} developer</h2>
+    <h2>I'm a {{ persona.speciality }}</h2>
     <a href="#about" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
     </section><!-- End Hero -->
 
@@ -38,16 +38,16 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about px-4 px-md-0 ">
-      <div class="container" data-aos="fade-up">
+      <div class="container w-md-75" data-aos="fade-up" >
 
         <div class="section-title">
           <h2>About</h2>
-          <p style="text-align: justify">&nbsp;&nbsp;&nbsp;&nbsp;{{ textDescript.description }}</p>
+          <p style="text-align: justify">{{ textDescript.description }}</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4">
-            <img src="{{persona.img.url}}" class="img-fluid w-75 " alt="" style="height: 85%">
+            <img src="{{persona.img.url}}" class="img-fluid w-75 " alt="" style="height: 85%; width: 85%">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content ps-2 ">
             <h3>{{ persona.speciality }} Developer</h3>
@@ -135,7 +135,7 @@
             <h3 class="resume-title">Sumary</h3>
             <div class="resume-item pb-0">
                 <h4>Sheila Fundora </h4>
-                <p><em>{{ sumary.description}}</em></p>
+                <p>{{ sumary.description}}</p>
                 <ul>
                   <li>{{ persona.city }}</li>
                   <li>{{persona.phone}}</li>
@@ -315,7 +315,7 @@
                 seeking to acquire everything necessary to excel professionally.
                 </p>
               <div class="social-links" >
-                <a href="{{ twitter.link }}" class="twitter"><i class="bi bi-telegram"></i></a>
+                <a href="{{ twitter.link }}" class="twitter"><i class="bi bi-twitter"></i></a>
                 <a href="{{ facebook.link }}" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="{{ instagram.link }}" class="instagram"><i class="bi bi-instagram"></i></a>
                 <a href="{{ linkdin.link }}" class="linkedin"><i class="bi bi-linkedin"></i></a>
@@ -359,27 +359,6 @@
     </div>
   </div>
 
-
-{#          <div class="col-lg-5 col-md-8">#}
-{#             <form action="" method="POST" role="form" class="php-email-form">#}
-{#                {% csrf_token %}#}
-{#              <div class="form-group mt-2">#}
-{#                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required autocomplete="off">#}
-{#              </div>#}
-{#              <div class="form-group mt-2">#}
-{#                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required autocomplete="off">#}
-{#              </div>#}
-{#              <div class="form-group mt-2">#}
-{#                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required autocomplete="off">#}
-{#              </div>#}
-{#              <div class="form-group mt-2">#}
-{#                <textarea class="form-control" name="message" rows="5" placeholder="Message" required autocomplete="off"></textarea>#}
-{#              </div>#}
-{#                <div class="text-center mt-3">#}
-{#                    <button type="submit">Send Message</button>#}
-{#                </div>#}
-{#             </form>#}
-{#          </div>#}
 
         </div>
       </div>
