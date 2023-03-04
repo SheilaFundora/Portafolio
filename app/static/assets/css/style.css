@@ -332,10 +332,15 @@ h6 {
   height: 75vh;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
-  padding: 0 15px;
+  clear: both;
 }
 
-#hero h1 {
+.hero-back{
+  clear: both;
+  background-color: rgba(17, 17, 17, 0.35);!important;
+}
+
+.hero-back h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 700;
@@ -343,7 +348,7 @@ h6 {
   color: #fff;
 }
 
-#hero h2 {
+.hero-back h2 {
   color: #eee;
   margin-bottom: 10px;
   font-size: 24px;
@@ -351,14 +356,14 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#hero .btn-get-started {
+.hero-back .btn-get-started {
   font-size: 64px;
   transition: 0.5s;
   color: #fff;
   height: 60px;
 }
 
-#hero .btn-get-started:hover {
+.hero-back .btn-get-started:hover {
   padding-top: 10px;
   color: #d43076;
 }
@@ -370,12 +375,12 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  #hero h1 {
+  .hero-back h1 {
     font-size: 28px;
     line-height: 36px;
   }
 
-  #hero h2 {
+  .hero-back h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;

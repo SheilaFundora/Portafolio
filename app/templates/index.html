@@ -3,8 +3,8 @@
 {% block content %}
 
     <!-- ======= Header ======= -->
-    <header id="header" class="d-flex align-items-center px-3 px-md-0">
-            <div class="container d-flex align-items-center justify-content-between">
+    <header id="header" class="d-flex align-items-center px-3 px-md-0 bg-p">
+        <div class="container d-flex align-items-center justify-content-between">
 
           <div class="logo">
             <h1><a href="{%  url 'index' %}">Sheila</a></h1>
@@ -25,20 +25,23 @@
           </nav><!-- .navbar -->
 
         </div>
-        </header>
+    </header>
     <!-- End Header -->
 
-    <section id="hero" class="d-flex flex-column align-items-center justify-content-center mt-5">
-    <h1>Hi, I'm Sheila!</h1>
-    <h2>I'm a {{ persona.speciality }}</h2>
-    <a href="#about" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
+    <section id="hero" class="m-0 p-0 ">
+        <div class="hero-back w-100 h-100 d-flex flex-column align-items-center justify-content-center ">
+            <h1>Hi, I'm Sheila!</h1>
+            <h2>I'm a {{ persona.speciality }}</h2>
+            <a href="#about" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
+        </div>
     </section><!-- End Hero -->
+
 
     <main id="main">
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about px-4 px-md-0 ">
-      <div class="container w-md-75" data-aos="fade-up" >
+      <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>About</h2>
@@ -279,8 +282,8 @@
 
         <div class="row portfolio-container">
             {% for it in portafolio %}
-              <div class="col-lg-4 ol-md-6 portfolio-item filter-{{ it.category }}" >
-             <div class="portfolio-wrap mb-3 ">
+              <div class="col-lg-4 ol-md-6 portfolio-item filter-{{ it.category }} b" >
+             <div class="portfolio-wrap mb-3 border-portafolio">
               <img src="{{it.img.url}}" class="img-fluid" alt="" style="min-height: 200px">
               <div class="portfolio-info">
                 <h4>{{it.name}}</h4>

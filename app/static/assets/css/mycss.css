@@ -14,3 +14,7 @@ column-count: 2;
   }
 
 }
+
+.border-portafolio{
+    box-shadow: 0 0 15px gray;
+}
